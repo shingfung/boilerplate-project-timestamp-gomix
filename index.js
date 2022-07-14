@@ -44,7 +44,7 @@ app.get("/api/:date", function (req, res) {
     return;
   }
 
-  if ((new Date(parseInt(date))).getTime() === parseInt(date) && date.indexOf('-') === -1 && date.indexOf('-') === -1){
+  if ((new Date(parseInt(date))).getTime() === parseInt(date) && date.indexOf('-') === -1 && date.indexOf(' ') === -1){
     unix = parseInt(date);
     utc = (new Date(parseInt(date))).toUTCString();
     
